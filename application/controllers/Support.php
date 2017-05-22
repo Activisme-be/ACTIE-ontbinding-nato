@@ -24,5 +24,7 @@ class Support extends CI_Controller
         if ($this->form_validation->run() === false) {
             return $this->blade->render('index');
         }
+
+        return "Success";
     }
 }

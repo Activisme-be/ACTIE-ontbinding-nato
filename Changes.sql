@@ -15,6 +15,24 @@
 /*!40101 SET @OLD_SQL_MODE = @@SQL_MODE, SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES = @@SQL_NOTES, SQL_NOTES = 0 */;
 
+DROP TABLE IF EXISTS `signatures`;
+/*!40101 SET @saved_cs_client = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `signatures` (
+  `id`          INT(11)   NOT NULL AUTO_INCREMENT,
+  `country`     INT(11)   NOT NULL,
+  `city`     INT(11)   NOT NULL,
+  `name`        VARCHAR(255) DEFAULT NULL,
+  `email`       VARCHAR(255) DEFAULT NULL,
+  `created_at`  TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted_at`  TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 2585
+  DEFAULT CHARSET = utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --
 -- Table structure for table `cities`
 --
