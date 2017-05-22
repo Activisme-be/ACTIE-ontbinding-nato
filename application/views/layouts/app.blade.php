@@ -6,12 +6,14 @@
         <meta name="description" content="Ontbind de nato.">
         <meta name="author" content="ActivismeBE">
 
-        <title> ActivismeBE | Ontbind de nato </title>
+        <title> ActivismeBE | Ontbind de NATO </title>
 
-        <link rel="icon"       href="{{ site_url('favicon.ico') }}">
+        <link rel="icon"       href="{{ site_url('assets/favicon.ico') }}">
         <link rel="stylesheet" href="{{ site_url('assets/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ site_url('assets/css/ie10-viewport-bug-workaround.css') }}">
         <link rel="stylesheet" href="{{ site_url('assets/css/custom.css') }}">
+        <link rel="stylesheet" href="{{ site_url('assets/css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ site_url('assets/css/bootstrap-social.css') }}">
 
         {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries. --}}
         <!--[lt IE 9]>
@@ -30,15 +32,16 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a class="navbar-brand" href="#">Ontbind de NATO</a>
+                    <a class="navbar-brand" href="{{ site_url() }}">Ontbind de NATO</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ site_url() }}">Besluitvorming</a></li>
+                        <li><a href="">Steunbetuigingen</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="">Disclaimer</a></li>
+                        <li><a href="{{ site_url('disclaimer') }}">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
