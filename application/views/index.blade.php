@@ -81,32 +81,56 @@
 			<div class="panel-heading">Ik steun dit verdrag:</div>
 
 			<div class="panel-body">
-				<form class="form-horizontal">
-					<div class="form-group">
+				<form class="form-horizontal" method="POST" action="{{ site_url('support/store') }}" id="support">
+					<div class="form-group {{ form_error('name') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
 							<input type="text" class="form-control input-sm" placeholder="Naam en voornaam" name="name" value="">
+
+							@if (form_error('name'))
+								<span class="help-block"><small>{{ form_error('name') }}</small></span>
+							@endif
 						</div>
 					</div>
 
-					<div class="form-group form-group-sm">
+					<div class="form-group form-group-sm {{ form_error('email') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
 							<input class="form-control" placeholder="Email adres" name="email">
+
+							@if (form_error('email'))
+								<span class="help-block"><small>{{ form_error('email') }}</small></span>
+							@endif
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group {{ form_error('city') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
-							<select class="form-control input-sm">
+							<select name="city" class="form-control input-sm">
 								<option value="">-- Selecteer je stad --</option>
+								
+								@foreach (Cities::select(['id', 'postal_code', 'city_name'])->get() as $city)
+									<option value="{{ $city->id }}">{{ $city->postal_code }} | {{ $city->city_name  }}</option>
+								@endforeach
 							</select>
+
+							@if (form_error('city'))
+								<span class="help-block"><small>{{ form_error('city') }}</small></span>
+							@endif
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group {{ form_error('country') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
-							<select class="form-control input-sm">
+							<select name="country" class="form-control input-sm">
 								<option value="">-- Selecteer je land --</option>
+								
+								@foreach (Countries::all() as $country)
+									<option value="{{ $country->id }}" @if($country->country_name === 'Belgium') selected @endif> {{ $country->country_name }} </option>
+								@endforeach
 							</select>
+
+							@if (form_error('country'))
+								<span class="help-block"><small>{{ form_error('country') }}</small></span>
+							@endif
 						</div>
 					</div>
 
@@ -119,11 +143,11 @@
 			</div>
 
 			<div class="panel-footer">
-				<button class="btn btn-xs btn-success" form="signature" type="submit">
+				<button form="support" class="btn btn-xs btn-success" type="submit">
 					<span class="fa fa-pencil" aria-hidden="true"></span> Teken
 				</button>
 
-				<button class="btn btn-xs btn-danger">
+				<button form="support" class="btn btn-xs btn-danger">
 					<span class="fa fa-undo"></span> Formulier legen</span>
 				</button>
 			</div>

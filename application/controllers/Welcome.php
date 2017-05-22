@@ -6,7 +6,7 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct(); 
 
-		$this->load->library(['blade', 'session']);
+		$this->load->library(['blade', 'session', 'form_validation']);
 		$this->load->helper(['url']);
 	}
 
