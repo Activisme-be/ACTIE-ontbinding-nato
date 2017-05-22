@@ -25,6 +25,17 @@ class Support extends CI_Controller
             return $this->blade->render('index');
         }
 
-        return "Success";
+        $input['name']    = $this->input->post('name', true);
+        $input['email']   = $this->input->post('email', true);
+        $input['country'] = $this->input->post('country', true);
+        $input['city']    = $this->input->post('city', true);
+        $input['publish'] = $this->input->post('publish', true);
+
+        if (Signatures::create($input)) {
+            $this->session->set_flashdata('class', 'alert alert-success');
+            $this->session->set_flashdata('message', 'Bedankt voor het steunen van dit verdrag.');
+        }
+
+        return redirect($_SERVER['HTTP_REFERER']);
     }
 }

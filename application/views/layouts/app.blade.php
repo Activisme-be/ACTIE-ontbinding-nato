@@ -36,12 +36,12 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ site_url() }}">Besluitvorming</a></li>
-                        <li><a href="">Steunbetuigingen</a></li>
+                        <li class="active"><a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a></li>
+                        <li><a href=""><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ site_url('disclaimer') }}">Disclaimer</a></li>
+                        <li><a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,6 +74,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ site_url("assets/js/jquery.min.js")}}"><\/script>')</script>
+        <script> $('div.alert').not('.alert-important').delay(3000).slideUp(300); </script>
         <script src="{{ site_url('assets/js/bootstrap.js') }}"></script>
     
         {{-- IE10 viewport hack for Surface/desktop Windows 8 bug --}}
