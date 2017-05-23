@@ -11,8 +11,17 @@ class Support extends CI_Controller
 
     public function index()
     {
+        $this->load->library(['pagination', 'paginator']);
+
         $data['title']      = 'Steinbetuigingen';
-        $data['signatures'] = Signatures::with(['county', 'cities.region'])->get();
+        $data['signatures'] = Signatures::with(['county', 'cities.region']);
+
+        $this->pagination->initialize($this->paginator->relation(
+            base_url('support'), count($data['signatures']->get()), 50, 2)
+        );
+
+        $data['results']      = $data['signatures']->skip($this->input->get('page'))->take(50)->get();
+        $data['results_link'] = $this->pagination->create_links();
 
         return $this->blade->render('support', $data);
     }

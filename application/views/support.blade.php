@@ -35,7 +35,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($signatures as $signature)
+                                    @foreach ($results as $signature)
                                         <tr>
                                             <td><strong>#{{ $signature->id }}</strong></td>
 
@@ -59,6 +59,8 @@
                                     @endforeach
                                 </tbody>
                             </table>
+
+                            {{ $results_link }} {{-- Pagination pager --}}
                         </div>
                     @endif
                 </div>

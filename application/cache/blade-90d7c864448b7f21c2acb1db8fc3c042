@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495542360;s:3:"ttl";i:3600;s:4:"data";s:3826:"
+a:3:{s:4:"time";i:1495543812;s:3:"ttl";i:3600;s:4:"data";s:3919:"
 
 <?php $this->_section_start('content'); ?>
     <div class="row">
@@ -35,7 +35,7 @@ a:3:{s:4:"time";i:1495542360;s:3:"ttl";i:3600;s:4:"data";s:3826:"
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($signatures as $signature): ?>
+                                    <?php foreach ($results as $signature): ?>
                                         <tr>
                                             <td><strong>#<?php echo  $signature->id ; ?></strong></td>
 
@@ -59,7 +59,8 @@ a:3:{s:4:"time";i:1495542360;s:3:"ttl";i:3600;s:4:"data";s:3826:"
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
-                        </div>
+
+                            <?php echo  $results_link ; ?> <?php //  Pagination pager --}} ?>                        </div>
                     <?php endif; ?>
                 </div>
             </div>
