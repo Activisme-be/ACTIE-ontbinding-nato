@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb89e310-e18f-4b56-b2b2-c716abaf4895" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Signatures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Changes.sql" afterPath="$PROJECT_DIR$/Changes.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/blade-23ee8420a13c259e1d87d3831dadb4f2" afterPath="$PROJECT_DIR$/application/cache/blade-23ee8420a13c259e1d87d3831dadb4f2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/blade-579ab5ed1a9acce030bf84abf1b7baae" afterPath="$PROJECT_DIR$/application/cache/blade-579ab5ed1a9acce030bf84abf1b7baae" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/blade-e4ee96535d8e348209c875da56352540" afterPath="$PROJECT_DIR$/application/cache/blade-e4ee96535d8e348209c875da56352540" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Support.php" afterPath="$PROJECT_DIR$/application/controllers/Support.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/index.blade.php" afterPath="$PROJECT_DIR$/application/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/application/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,10 +104,11 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" column="151" lean-forward="false" selection-start-line="52" selection-start-column="151" selection-end-line="52" selection-end-column="151" />
+            <state relative-caret-position="188">
+              <caret line="73" column="181" lean-forward="false" selection-start-line="73" selection-start-column="181" selection-end-line="73" selection-end-column="181" />
               <folding>
                 <element signature="e#283#309#0#HTML" expanded="true" />
+                <element signature="e#3320#3348#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,6 +131,7 @@
       <find>autolo</find>
       <find>sess</find>
       <find>lang</find>
+      <find>NAVO-verd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -515,12 +511,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495472215228</updated>
-      <workItem from="1495472216481" duration="16198000" />
+      <workItem from="1495472216481" duration="17042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16198000" />
+    <option name="totallyTimeSpent" value="17042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -534,7 +530,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43090317" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4352557" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -715,10 +711,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="151" lean-forward="false" selection-start-line="52" selection-start-column="151" selection-end-line="52" selection-end-column="151" />
+        <state relative-caret-position="188">
+          <caret line="73" column="181" lean-forward="false" selection-start-line="73" selection-start-column="181" selection-end-line="73" selection-end-column="181" />
           <folding>
             <element signature="e#283#309#0#HTML" expanded="true" />
+            <element signature="e#3320#3348#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
