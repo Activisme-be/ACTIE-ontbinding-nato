@@ -3,26 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Ontbind de nato.">
-        <meta name="author" content="ActivismeBE">
 
         <title> ActivismeBE | Ontbind de NATO </title>
 
-        <link rel="icon"       href="{{ site_url('assets/favicon.ico') }}">
-        <link rel="stylesheet" href="{{ site_url('assets/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ site_url('assets/css/ie10-viewport-bug-workaround.css') }}">
-        <link rel="stylesheet" href="{{ site_url('assets/css/custom.css') }}">
-        <link rel="stylesheet" href="{{ site_url('assets/css/font-awesome.css') }}">
-        <link rel="stylesheet" href="{{ site_url('assets/css/bootstrap-social.css') }}">
+        <link rel="icon"       href="//nato.activisme.be/assets/favicon.ico">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/ie10-viewport-bug-workaround.css">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/custom.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap-social.css">
 
         {{-- Facebook OpenGraph Data --}}
-        <meta property="og:title" content="Ontbind de NATO!" />
         <meta property="og:type" content="article" />
-        <meta property="og:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupactss is meer dan een kwart eeuw geleden ontbonden.
+        <meta property="og:url" content="http://www.nato.activisme.be" />
+        <meta property="og:title" content="Ontbind de NATO!" />
+        <meta property="og:image" content="{{ site_url('assets/img/front.jpg') }}" />
+        <meta property="og:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupacts is meer dan een kwart eeuw geleden ontbonden.
         Het is tijd dat ook de NAVO ophoudt te bestaan en dat we onze veiligheid gemeenschappelijk, samen met onze buren,
         maar ook met landen uit de hele wereld, organiseren. We willen dit doen in de schoot van de Verenigde Naties, die net daarvoor een mandaat heeft gekregen.">
-        <meta property="og:url" content="https://www.nato.activisme.be" />
-        <meta property="og:image" content="{{ site_url('assets/img/front.jpg') }}" />
+        <meta property='article:publisher' content='https://www.facebook.com/ActivismeBE' />
+
 
         {{-- Twitter card --}}
         <meta name="twitter:card" content="summary" />
@@ -82,7 +82,8 @@
         <script>window.jQuery || document.write('<script src="{{ site_url("assets/js/jquery.min.js")}}"><\/script>')</script>
         <script> $('div.alert').not('.alert-important').delay(3000).slideUp(300); </script>
         <script src="{{ site_url('assets/js/bootstrap.js') }}"></script>
-    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.0/vue.js"></script>
+
         {{-- IE10 viewport hack for Surface/desktop Windows 8 bug --}}
         <script src="{{ base_url('assets/js/ie10-viewport-bug-workaround.js') }}"></script>
     </body>

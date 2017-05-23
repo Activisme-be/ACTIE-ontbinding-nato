@@ -1,17 +1,17 @@
-<div class="copyright">
+a:3:{s:4:"time";i:1495547707;s:3:"ttl";i:3600;s:4:"data";s:583:"<div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-4">
-                <p>© {{ date('Y') }} - ActivismeBE</p>
+            <div class="col-md-6">
+                <p>© <?php echo  date('Y') ; ?> - ActivismeBE</p>
             </div>
 
-            <div class="col-md-6 col-sm-8">
+            <div class="col-md-6">
                 <ul class="bottom_ul">
-                    <li><a href="http://www.activisme.be">ActivismeBE</a></li>
+                    <li><a href="http:://www.activisme.be">ActivismeBE</a></li>
                     <li><a href="https://www.vrede.be/">Vrede.be</a></li>
                     <li><a href="https://stopnato2017.org/">StopNATO2017</a></li>
                 </ul>
             </div>
         </div>
     </div>
-</div>
+</div>";}

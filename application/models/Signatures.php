@@ -4,7 +4,7 @@ class Signatures extends \Illuminate\Database\Eloquent\Model
 {
     protected $table = 'signatures';
 
-    protected $fillable = ['city', 'name', 'country', 'email', 'publish'];
+    protected $fillable = ['city', 'name', 'country', 'postal_code', 'city_name', 'email', 'publish'];
 
     public function county()
     {

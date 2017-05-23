@@ -1,9 +1,9 @@
-@layout('layouts/app')
+a:3:{s:4:"time";i:1495547900;s:3:"ttl";i:3600;s:4:"data";s:3816:"
 
-@section('content')
+<?php $this->_section_start('content'); ?>
     <div class="row">
         <div class="col-sm-12">
-            <img class="img-rounded img-front" src="{{ site_url('assets/img/front.jpg') }}">
+            <img class="img-rounded img-front" src="<?php echo  site_url('assets/img/front.jpg') ; ?>">
         </div>
     </div>
 
@@ -15,13 +15,13 @@
                         <h2 style="margin-bottom: -5px;">Steunbetuigingen</h2>
                     </div>
 
-                    @if ($count === 0)
+                    <?php if ($count === 0): ?>
                         <div class="alert alert-info alert-important" role="alert">
                             <strong><span class="fa fa-info-circle" aria-hidden="true"></span> Info:</strong>
                             Er zijn nog geen steunbetuigingen voor dit verdrag.
                         </div>
-                    @else
-                        <p class="lead">Er zijn {{ $count }} steunbetuigingen voor dit verdrag.</p>
+                    <?php else: ?>
+                        <p class="lead">Er zijn <?php echo  $count ; ?> steunbetuigingen voor dit verdrag.</p>
 
                         <div class="table-responsive">
                             <table class="table table-condensed table-hover table-bordered table-striped">
@@ -35,36 +35,37 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($results as $signature)
+                                    <?php foreach ($results as $signature): ?>
                                         <tr>
-                                            <td><strong>#{{ $signature->id }}</strong></td>
+                                            <td><strong>#<?php echo  $signature->id ; ?></strong></td>
 
-                                            @if ((string) $signature->publish !== 'Y')
+                                            <?php if ((string) $signature->publish !== 'Y'): ?>
                                                 <td colspan="3"><span class="text-muted"><i>(De gebruiker heeft gekozen om anoniem te tekenen.)</i></span></td>
-                                            @else
-                                                <td>{{ ucfirst($signature->name) }}</td>
+                                            <?php else: ?>
+                                                <td><?php echo  $signature->name ; ?></td>
                                                 <td>
-                                                    <img style="height: 12px;" src="{{ site_url('assets/img/flags/' . $signature->county->country_flag) }}" alt="{{ $signature->county->country_name }}">
-                                                    {{ $signature->county->country_name }}
+                                                    <img style="height: 12px;" src="<?php echo  site_url('assets/img/flags/' . $signature->county->country_flag) ; ?>" alt="<?php echo  $signature->county->country_name ; ?>">
+                                                    <?php echo  $signature->county->country_name ; ?>
                                                 </td>
 
                                                 <td>
-                                                    {{ $signature->postal_code }} {{ ucfirst($signature->city_name) }}
-                                                    {{-- $signature->cities->region->province_name_nl --}}
+                                                    <?php echo  $signature->cities->postal_code ; ?> <?php echo  $signature->cities->city_name ; ?> |
+                                                    <?php echo  $signature->cities->region->province_name_nl ; ?>
                                                 </td>
-                                            @endif
+                                            <?php endif; ?>
 
-                                            <td>{{ $signature->created_at->format('d-m-Y H:i') }}</td>
+                                            <td><?php echo  $signature->created_at->format('d-m-Y H:i') ; ?></td>
                                         </tr>
-                                    @endforeach
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
 
-                            {{ $results_link }} {{-- Pagination pager --}}
-                        </div>
-                    @endif
+                            <?php echo  $results_link ; ?> <?php //  Pagination pager  ?>                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+<?php $this->_section_end(); ?>
+<?php echo $this->_include('layouts/app'); ?>
+";}

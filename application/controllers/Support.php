@@ -14,13 +14,14 @@ class Support extends CI_Controller
         $this->load->library(['pagination', 'paginator']);
 
         $data['title']      = 'Steinbetuigingen';
-        $data['signatures'] = Signatures::with(['county', 'cities.region']);
+        $data['signatures'] = new Signatures;
+        $data['count']      = Signatures::count();
 
         $this->pagination->initialize($this->paginator->relation(
             base_url('support'), count($data['signatures']->get()), 50, 2)
         );
 
-        $data['results']      = $data['signatures']->skip($this->input->get('page'))->take(50)->get();
+        $data['results']      = $data['signatures']->skip($this->input->get('page', true))->take(50)->get();
         $data['results_link'] = $this->pagination->create_links();
 
         return $this->blade->render('support', $data);
@@ -31,7 +32,8 @@ class Support extends CI_Controller
         $this->form_validation->set_rules('name', 'Naam', 'trim|required');
         $this->form_validation->set_rules('email', 'E-mail adres', 'trim|required|is_unique[signatures.email]');
         $this->form_validation->set_rules('country', 'Land', 'trim|required');
-        $this->form_validation->set_rules('city', 'Stad', 'trim|required');
+        $this->form_validation->set_rules('city_name', 'Stadsnaam', 'trim|required');
+        $this->form_validation->set_rules('postal_code', 'Postcode', 'trim|required');
 
         if ($this->form_validation->run() === false) {
             return $this->blade->render('index');
@@ -40,12 +42,13 @@ class Support extends CI_Controller
         $input['name']    = $this->input->post('name', true);
         $input['email']   = $this->input->post('email', true);
         $input['country'] = $this->input->post('country', true);
-        $input['city']    = $this->input->post('city', true);
+        $input['city_name']    = $this->input->post('city_name', true);
+        $input['postal_code']  = $this->input->post('postal_code', true);
 
-        if ($this->input->post('publish', true) === 'Y') {
-            $input['publish'] = $this->input->post('publish', true);
-        } else {
+        if ($this->input->post('publish', true) === 'N') {
             $input['publish'] = 'N';
+        } else {
+            $input['publish'] = 'Y';
         }
 
         if (Signatures::create($input)) {

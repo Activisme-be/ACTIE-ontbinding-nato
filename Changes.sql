@@ -19,6 +19,19 @@
 -- Table structure for table `ci_sessions`
 --
 
+CREATE TABLE `signatures_fix` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `country` int(11) NOT NULL,
+  `postal_code` varchar(255) DEFAULT NULL,
+  `city_name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `publish` varchar(255) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2588 DEFAULT CHARSET=utf8;
+
 DROP TABLE IF EXISTS `ci_sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
