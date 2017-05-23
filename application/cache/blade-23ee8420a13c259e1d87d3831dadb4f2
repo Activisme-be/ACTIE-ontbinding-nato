@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495536805;s:3:"ttl";i:3600;s:4:"data";s:4316:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1495538155;s:3:"ttl";i:3600;s:4:"data";s:3663:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
@@ -35,7 +35,7 @@ a:3:{s:4:"time";i:1495536805;s:3:"ttl";i:3600;s:4:"data";s:4316:"<!DOCTYPE html>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<?php echo  site_url() ; ?>"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a></li>
-                        <li><a href=""><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
+                        <li><a href="<?php echo  site_url('support') ; ?>"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -47,25 +47,7 @@ a:3:{s:4:"time";i:1495536805;s:3:"ttl";i:3600;s:4:"data";s:4316:"<!DOCTYPE html>
 
         <div class="container"> <?php //  Container --}} ?>            <?php echo $this->_yield('content'); ?>
         </div> <?php //  /Container --}} ?>
-
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© <?php echo  date('Y') ; ?> - ActivismeBE</p>
-                    </div>
-    
-                    <div class="col-md-6">
-                        <ul class="bottom_ul">
-                            <li><a href="http:://www.activisme.be">ActivismeBE</a></li>
-                            <li><a href="https://www.vrede.be/">Vrede.be</a></li>
-                            <li><a href="https://stopnato2017.org/">StopNATO2017</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php echo $this->_yield('footer'); ?>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo  site_url("assets/js/jquery.min.js"); ?>"><\/script>')</script>

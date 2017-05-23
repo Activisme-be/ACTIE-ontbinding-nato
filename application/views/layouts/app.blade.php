@@ -37,7 +37,7 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a></li>
-                        <li><a href=""><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
+                        <li><a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -52,25 +52,7 @@
             @yield('content')
         </div> {{-- /Container --}}
 
-
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© {{ date('Y') }} - ActivismeBE</p>
-                    </div>
-    
-                    <div class="col-md-6">
-                        <ul class="bottom_ul">
-                            <li><a href="http:://www.activisme.be">ActivismeBE</a></li>
-                            <li><a href="https://www.vrede.be/">Vrede.be</a></li>
-                            <li><a href="https://stopnato2017.org/">StopNATO2017</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @yield('footer')
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ site_url("assets/js/jquery.min.js")}}"><\/script>')</script>

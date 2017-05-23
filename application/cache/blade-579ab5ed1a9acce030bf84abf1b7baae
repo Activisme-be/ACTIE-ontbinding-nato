@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495537087;s:3:"ttl";i:3600;s:4:"data";s:13499:"
+a:3:{s:4:"time";i:1495538721;s:3:"ttl";i:3600;s:4:"data";s:13624:"
 
 <?php $this->_section_start('content'); ?>
 <div class="row">
@@ -186,6 +186,10 @@ a:3:{s:4:"time";i:1495537087;s:3:"ttl";i:3600;s:4:"data";s:13499:"
 		</a>
 	</div>
 </div>
+<?php $this->_section_end(); ?>
+
+<?php $this->_section_start('footer'); ?>
+	<?php echo $this->_include('layouts/footer'); ?>
 <?php $this->_section_end(); ?>
 <?php echo $this->_include('layouts/app'); ?>
 ";}

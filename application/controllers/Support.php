@@ -11,7 +11,10 @@ class Support extends CI_Controller
 
     public function index()
     {
+        $data['title']      = 'Steinbetuigingen';
+        $data['signatures'] = Signatures::all();
 
+        return $this->blade->render('support', $data);
     }
 
     public function store()

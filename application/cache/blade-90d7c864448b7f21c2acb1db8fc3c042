@@ -1,0 +1,46 @@
+a:3:{s:4:"time";i:1495538719;s:3:"ttl";i:3600;s:4:"data";s:1986:"
+
+<?php $this->_section_start('content'); ?>
+    <div class="row">
+        <div class="col-sm-12">
+            <img class="img-rounded img-front" src="<?php echo  site_url('assets/img/front.jpg') ; ?>">
+        </div>
+    </div>
+
+    <div style="padding-top: 15px;" class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="margin-top: -20px;" class="page-header">
+                        <h2 style="margin-bottom: -5px;">Steunbetuigingen</h2>
+                    </div>
+
+                    <?php if ((int) count($signatures) === 0): ?>
+                        <div class="alert alert-info alert-important" role="alert">
+                            <strong><span class="fa fa-info-circle" aria-hidden="true"></span> Info:</strong>
+                            Er zijn nog geen steunbetuigingen voor dit verdrag.
+                        </div>
+                    <?php else: ?>
+                        <p class="lead">Er zijn <?php echo  count($signatures) ; ?> steunbetuigingen voor dit verdrag.</p>
+
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Naam:</th>
+                                        <th>Land:</th>
+                                        <th>Plaats:</th>
+                                        <th>Datum:</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $this->_section_end(); ?>
+<?php echo $this->_include('layouts/app'); ?>
+";}
