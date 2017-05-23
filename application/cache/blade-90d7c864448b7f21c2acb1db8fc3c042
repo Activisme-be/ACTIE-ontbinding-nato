@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495538719;s:3:"ttl";i:3600;s:4:"data";s:1986:"
+a:3:{s:4:"time";i:1495542360;s:3:"ttl";i:3600;s:4:"data";s:3826:"
 
 <?php $this->_section_start('content'); ?>
     <div class="row">
@@ -24,7 +24,7 @@ a:3:{s:4:"time";i:1495538719;s:3:"ttl";i:3600;s:4:"data";s:1986:"
                         <p class="lead">Er zijn <?php echo  count($signatures) ; ?> steunbetuigingen voor dit verdrag.</p>
 
                         <div class="table-responsive">
-                            <table class="table table-condensed table-hover table-striped">
+                            <table class="table table-condensed table-hover table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -34,6 +34,30 @@ a:3:{s:4:"time";i:1495538719;s:3:"ttl";i:3600;s:4:"data";s:1986:"
                                         <th>Datum:</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+                                    <?php foreach ($signatures as $signature): ?>
+                                        <tr>
+                                            <td><strong>#<?php echo  $signature->id ; ?></strong></td>
+
+                                            <?php if ((string) $signature->publish === 'Y'): ?>
+                                                <td colspan="3"><span class="text-muted"><i>(De gebruiker heeft gekozen om anoniem te tekenen.)</i></span></td>
+                                            <?php else: ?>
+                                                <td><?php echo  $signature->name ; ?></td>
+                                                <td>
+                                                    <img style="height: 12px;" src="<?php echo  site_url('assets/img/flags/' . $signature->county->country_flag) ; ?>" alt="<?php echo  $signature->county->country_name ; ?>">
+                                                    <?php echo  $signature->county->country_name ; ?>
+                                                </td>
+
+                                                <td>
+                                                    <?php echo  $signature->cities->postal_code ; ?> <?php echo  $signature->cities->city_name ; ?> |
+                                                    <?php echo  $signature->cities->region->province_name_nl ; ?>
+                                                </td>
+                                            <?php endif; ?>
+
+                                            <td><?php echo  $signature->created_at->format('d-m-Y H:i') ; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
                             </table>
                         </div>
                     <?php endif; ?>

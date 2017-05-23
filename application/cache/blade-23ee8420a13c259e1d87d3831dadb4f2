@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495538155;s:3:"ttl";i:3600;s:4:"data";s:3663:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1495542775;s:3:"ttl";i:3600;s:4:"data";s:3917:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
@@ -34,8 +34,12 @@ a:3:{s:4:"time";i:1495538155;s:3:"ttl";i:3600;s:4:"data";s:3663:"<!DOCTYPE html>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo  site_url() ; ?>"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a></li>
-                        <li><a href="<?php echo  site_url('support') ; ?>"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
+                        <li class="<?php if(current_url() === site_url()): ?> active <?php endif; ?>">
+                            <a href="<?php echo  site_url() ; ?>"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a>
+                        </li>
+                        <li class="<?php if(current_url() === site_url('support')): ?> active <?php endif; ?>">
+                            <a href="<?php echo  site_url('support') ; ?>"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

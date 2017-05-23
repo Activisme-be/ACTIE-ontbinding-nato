@@ -36,12 +36,18 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a></li>
-                        <li><a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a></li>
+                        <li class="@if(current_url() === site_url()) active @endif">
+                            <a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a>
+                        </li>
+                        <li class="@if(current_url() === site_url('support')) active @endif">
+                            <a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a></li>
+                        <li class="@if(current_url() === site_url('disclaimer')) active @endif">
+                            <a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
+                        </li>
                     </ul>
                 </div>
             </div>

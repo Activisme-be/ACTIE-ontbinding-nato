@@ -12,7 +12,7 @@ class Support extends CI_Controller
     public function index()
     {
         $data['title']      = 'Steinbetuigingen';
-        $data['signatures'] = Signatures::all();
+        $data['signatures'] = Signatures::with(['county', 'cities.region'])->get();
 
         return $this->blade->render('support', $data);
     }
@@ -32,7 +32,12 @@ class Support extends CI_Controller
         $input['email']   = $this->input->post('email', true);
         $input['country'] = $this->input->post('country', true);
         $input['city']    = $this->input->post('city', true);
-        $input['publish'] = $this->input->post('publish', true);
+
+        if ($this->input->post('publish', true) === 'Y') {
+            $input['publish'] = $this->input->post('publish', true);
+        } else {
+            $input['publish'] = 'N';
+        }
 
         if (Signatures::create($input)) {
             $this->session->set_flashdata('class', 'alert alert-success');

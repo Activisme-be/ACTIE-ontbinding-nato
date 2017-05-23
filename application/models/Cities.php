@@ -10,4 +10,9 @@ class Cities extends Model
      * @var array
      */
     protected $fillable = ['city_name', 'lat_num', 'lng_num', 'province_id', 'postal_code'];
+
+    public function region()
+    {
+        return $this->belongsTo(Provinces::class, 'province_id');
+    }
 }
