@@ -15,6 +15,24 @@
         <link rel="stylesheet" href="{{ site_url('assets/css/font-awesome.css') }}">
         <link rel="stylesheet" href="{{ site_url('assets/css/bootstrap-social.css') }}">
 
+        {{-- Facebook OpenGraph Data --}}
+        <meta property="og:title" content="Ontbind de NATO!" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupactss is meer dan een kwart eeuw geleden ontbonden.
+        Het is tijd dat ook de NAVO ophoudt te bestaan en dat we onze veiligheid gemeenschappelijk, samen met onze buren,
+        maar ook met landen uit de hele wereld, organiseren. We willen dit doen in de schoot van de Verenigde Naties, die net daarvoor een mandaat heeft gekregen.">
+        <meta property="og:url" content="https://www.nato.activisme.be" />
+        <meta property="og:image" content="{{ site_url('assets/img/front.jpg') }}" />
+
+        {{-- Twitter card --}}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@Activisme_be" />
+        <meta name="twitter:title" content="Ontbind de NATO!" />
+        <meta name="twitter:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupactss is meer dan een kwart eeuw geleden ontbonden.
+        Het is tijd dat ook de NAVO ophoudt te bestaan en dat we onze veiligheid gemeenschappelijk, samen met onze buren,
+        maar ook met landen uit de hele wereld, organiseren. We willen dit doen in de schoot van de Verenigde Naties, die net daarvoor een mandaat heeft gekregen." />
+        <meta name="twitter:image" content="{{ site_url('assets/img/front.jpg') }}" />
+
         {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries. --}}
         <!--[lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
