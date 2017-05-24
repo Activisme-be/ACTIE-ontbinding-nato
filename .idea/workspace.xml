@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a81fab54-6881-4dba-b7a7-93276ec647a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Changes.sql" afterPath="$PROJECT_DIR$/Changes.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/blade-4fb578783dfab44d5cfad4368dcbf3fc" afterPath="$PROJECT_DIR$/application/cache/blade-4fb578783dfab44d5cfad4368dcbf3fc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/blade-e4ee96535d8e348209c875da56352540" afterPath="$PROJECT_DIR$/application/cache/blade-e4ee96535d8e348209c875da56352540" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Disclaimer.php" afterPath="$PROJECT_DIR$/application/controllers/Disclaimer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Support.php" afterPath="$PROJECT_DIR$/application/controllers/Support.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Blade.php" afterPath="$PROJECT_DIR$/application/libraries/Blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Paginator.php" afterPath="$PROJECT_DIR$/application/libraries/Paginator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cities.php" afterPath="$PROJECT_DIR$/application/models/Cities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Countries.php" afterPath="$PROJECT_DIR$/application/models/Countries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Provinces.php" afterPath="$PROJECT_DIR$/application/models/Provinces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Signatures.php" afterPath="$PROJECT_DIR$/application/models/Signatures.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/disclaimer.blade.php" afterPath="$PROJECT_DIR$/application/views/disclaimer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/index.blade.php" afterPath="$PROJECT_DIR$/application/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/application/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layouts/footer.blade.php" afterPath="$PROJECT_DIR$/application/views/layouts/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/support.blade.php" afterPath="$PROJECT_DIR$/application/views/support.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/ie10-viewport-bug-workaround.js" afterPath="$PROJECT_DIR$/assets/js/ie10-viewport-bug-workaround.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -88,8 +65,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cities.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Cities.php">
+      <file leaf-file-name="nato.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/nato.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -98,12 +75,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Signatures.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Signatures.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -162,6 +142,7 @@
         <option value="$PROJECT_DIR$/application/views/index.blade.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -358,12 +339,12 @@
       <option name="presentableId" value="Default" />
       <updated>1495544787253</updated>
       <workItem from="1495544788453" duration="15273000" />
-      <workItem from="1495572397739" duration="30000" />
+      <workItem from="1495572397739" duration="724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15303000" />
+    <option name="totallyTimeSpent" value="15997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -374,7 +355,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7758433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -598,6 +579,25 @@
         <state relative-caret-position="425">
           <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/nato.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
