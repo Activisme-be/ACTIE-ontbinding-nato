@@ -3,7 +3,7 @@
 /**
  * Class Support
  */
-class Support extends CI_Controller
+class Support extends MY_Controller
 {
 	/**
 	 * Support constructor.

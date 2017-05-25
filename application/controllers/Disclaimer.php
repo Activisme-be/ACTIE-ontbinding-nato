@@ -3,7 +3,7 @@
 /**
  * Class Disclaimer
  */
-class Disclaimer extends CI_Controller
+class Disclaimer extends MY_Controller
 {
 	/**
 	 * Disclaimer constructor.
