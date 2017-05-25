@@ -176,20 +176,20 @@
 		</div>
 
 		<div style="margin-bottom: 10px;">
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.nato.activisme.be" target="_blank" class="btn btn-social-icon btn-facebook">
-				<span class="fa fa-facebook"></span>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-facebook">
+				<span class="fa fa-facebook"></span> Deel op facebook
 			</a>
 
-			<a href="https://twitter.com/home?status=Ik%20wil%20de%20NATO%20ontbinden.%20%0A%0A-%20http%3A//www.nato.activisme.be%20%23ActivismeBE%20%23VredeBE" target="_blank" class="btn btn-social-icon btn-twitter">
-				<span class="fa fa-twitter"></span>
+			<a href="https://twitter.com/home?status=Ik%20wil%20de%20NATO%20ontbinden.%20%0A%0A-%20http%3A//www.nato.activisme.be%20%23ActivismeBE%20%23VredeBE" class="btn btn-block btn-social btn-twitter">
+				<span class="fa fa-twitter"></span> Deel op twitter
 			</a>
 
-			<a href="https://plus.google.com/share?url=http%3A//www.nato.activisme.be" target="_blank" class="btn btn-social-icon btn-google">
-				<span class="fa fa-google"></span>
+			<a href="https://plus.google.com/share?url=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-google">
+				<span class="fa fa-google"></span> Deel op Google+
 			</a>
 
-			<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.nato.activisme.be&title=Ontbind%20de%20NATO&summary=&source=" target="_blank" class="btn btn-social-icon btn-linkedin">
-				<span class="fa fa-linkedin"></span>
+			<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.nato.activisme.be&title=Ontbind%20de%20NATO&summary=&source=" class="btn btn-block btn-social btn-linkedin">
+				<span class="fa fa-linkedin"></span> Deel op LinkedIn
 			</a>
 		</div>
 	</div>
