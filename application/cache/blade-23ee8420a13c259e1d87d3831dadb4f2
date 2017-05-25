@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495714322;s:3:"ttl";i:3600;s:4:"data";s:5537:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1495732394;s:3:"ttl";i:3600;s:4:"data";s:5531:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
@@ -8,7 +8,7 @@ a:3:{s:4:"time";i:1495714322;s:3:"ttl";i:3600;s:4:"data";s:5537:"<!DOCTYPE html>
 
         <link rel="icon"       href="//nato.activisme.be/assets/favicon.ico">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap.css">
-        <link rel="stylesheet" href="//nato.activisme.be/assets/css/ie10-viewport-bug-workaround.css">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/ie10-viewport-bug-fix.css">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/custom.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap-social.css">
@@ -79,4 +79,5 @@ a:3:{s:4:"time";i:1495714322;s:3:"ttl";i:3600;s:4:"data";s:5537:"<!DOCTYPE html>
 
         <?php //  IE10 viewport hack for Surface/desktop Windows 8 bug  ?>        <script src="<?php echo  base_url('assets/js/ie10-viewport-bug-workaround.js') ; ?>"></script>
     </body>
-</html>";}
+</html>
+";}

@@ -8,7 +8,7 @@
 
         <link rel="icon"       href="//nato.activisme.be/assets/favicon.ico">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap.css">
-        <link rel="stylesheet" href="//nato.activisme.be/assets/css/ie10-viewport-bug-workaround.css">
+        <link rel="stylesheet" href="//nato.activisme.be/assets/css/ie10-viewport-bug-fix.css">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/custom.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap-social.css">
