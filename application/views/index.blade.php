@@ -66,7 +66,7 @@
 					<li style="padding-bottom: 5px;">erkennend dat de kernwapenstaten van de NAVO grootschalige moderniseringsprogramma’s opzetten in weerwil van artikel 6 van het nonproliferatieverdrag waarin ze zich ertoe verbinden hun kernwapenarsenalen volledig af te bouwen.</li>
 				</ol>
 
-				<h4 class="text">A. BESLUITEN DAT DE NAVO MET ONMIDDELLIJKE INGANG ZAL ONTBONDEN WORDEN</h4>
+				<h4>A. BESLUITEN DAT DE NAVO MET ONMIDDELLIJKE INGANG ZAL ONTBONDEN WORDEN</h4>
 
 				<ol class="list-unstyled" style="list-style: decimal inside;">
 					<li style="padding-bottom: 5px;">wegens herhaaldelijke inbreuken op het internationaal recht zoals vervat in het VN-Handvest;</li>
