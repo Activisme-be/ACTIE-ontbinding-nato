@@ -1,7 +1,15 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
+/**
+ * Class Support
+ */
 class Support extends CI_Controller
 {
+	/**
+	 * Support constructor.
+	 *
+	 * @return void.
+	 */
     public function __construct()
     {
         parent::__construct();
@@ -9,6 +17,11 @@ class Support extends CI_Controller
         $this->load->helper(['url']);
     }
 
+	/**
+	 * Display the signatures from the petition.
+	 *
+	 * @return mixed
+	 */
     public function index()
     {
         $this->load->library(['pagination', 'paginator']);
@@ -27,6 +40,11 @@ class Support extends CI_Controller
         return $this->blade->render('support', $data);
     }
 
+	/**
+	 * Store the signature in the database.
+	 *
+	 * @return mixed
+	 */
     public function store()
     {
         $this->form_validation->set_rules('name', 'Naam', 'trim|required');
@@ -39,19 +57,19 @@ class Support extends CI_Controller
             return $this->blade->render('index');
         }
 
-        $input['name']    = $this->input->post('name', true);
-        $input['email']   = $this->input->post('email', true);
-        $input['country'] = $this->input->post('country', true);
+        $input['name']         = $this->input->post('name', true);
+        $input['email']        = $this->input->post('email', true);
+        $input['country']      = $this->input->post('country', true);
         $input['city_name']    = $this->input->post('city_name', true);
         $input['postal_code']  = $this->input->post('postal_code', true);
 
-        if ($this->input->post('publish', true) === 'N') {
+        if ($this->input->post('publish', true) === 'N') { // User want to sign anonymous.
             $input['publish'] = 'N';
-        } else {
+        } else { // User want to sign public.
             $input['publish'] = 'Y';
         }
 
-        if (Signatures::create($input)) {
+        if (Signatures::create($input)) { // True if store success.
             $this->session->set_flashdata('class', 'alert alert-success');
             $this->session->set_flashdata('message', 'Bedankt voor het steunen van dit verdrag.');
         }
