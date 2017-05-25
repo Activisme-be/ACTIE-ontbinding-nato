@@ -60,12 +60,20 @@
                         <li class="@if(current_url() === site_url('support')) active @endif">
                             <a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
                         </li>
+						<li class="@if(current_url() === site_url('disclaimer')) active @endif">
+							<a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
+						</li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="@if(current_url() === site_url('disclaimer')) active @endif">
-                            <a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
-                        </li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Taal: NL <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Nederlands</a></li>
+								<li><a href="#">Frans</a></li>
+								<li><a href="#">Engels</a></li>
+							</ul>
+						</li>
                     </ul>
                 </div>
             </div>
