@@ -214,9 +214,10 @@ DROP TABLE IF EXISTS `signatures`;
 CREATE TABLE `signatures` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country` int(11) NOT NULL,
-  `city` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
+  city_name varchar(255) default null,
+  postal_code varchar(255) default null,
   `publish` varchar(255) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
