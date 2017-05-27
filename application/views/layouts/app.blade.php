@@ -67,7 +67,9 @@
 
                     <ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Taal: NL <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								Taal: NL <span class="caret"></span>
+							</a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">Nederlands</a></li>
 								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">Frans</a></li>
