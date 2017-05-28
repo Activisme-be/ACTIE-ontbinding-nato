@@ -53,4 +53,20 @@ class Authencation extends MY_Controller
 
         return redirect(site_url('backend'));
     }
+
+    /**
+	 * Check the given credentials against the database.
+	 *
+	 * @param  string $password The password for the user.
+	 * @return Blade view|Response
+	 */
+    public function check_database($password) 
+    {
+        $input['email'] = $this->input->post('email', true);
+
+        $MySQL['user'] = Authencate::where('email', $input['email'])
+            ->with(['permissions', 'abilities'])
+            ->where('blocked', 'N')
+            ->where('password', md5($password));
+    }
 }
