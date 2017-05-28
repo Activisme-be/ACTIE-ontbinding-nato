@@ -1,17 +1,17 @@
-@layout('layouts/app')
+a:3:{s:4:"time";i:1495978169;s:3:"ttl";i:3600;s:4:"data";s:2273:"
 
-@section('content')
+<?php $this->_section_start('content'); ?>
     <div class="col-md-offset-2 col-md-8">
-		@if ($this->session->flashdata('class') && $this->session->flashdata('message'))
-			<div class="{{ $this->session->flashdata('class') }}" role="alert">
-				{{ $this->session->flashdata('message') }}
+		<?php if ($this->session->flashdata('class') && $this->session->flashdata('message')): ?>
+			<div class="<?php echo  $this->session->flashdata('class') ; ?>" role="alert">
+				<?php echo  $this->session->flashdata('message') ; ?>
 			</div>
-		@endif
+		<?php endif; ?>
 
         <div class="panel panel-default">
             <div class="panel-heading">Inloggen:</div>
             <div class="panel-body">
-                <form action="{{ site_url('authencation/verify') }}" class="form-horizontal" method="POST">
+                <form action="<?php echo  site_url('authencation/verify') ; ?>" class="form-horizontal" method="POST">
                     <div class="form-group">
                         <label for="email" class="control-label col-md-3">
                             E-mail: <span class="text-danger">*</span>
@@ -47,4 +47,7 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('layouts/app'); ?>
+";}
