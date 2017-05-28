@@ -15,6 +15,144 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+DROP TABLE IF EXISTS users;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS users (
+    PRIMARY KEY (id),
+    id              INT(11)         NOT NULL AUTO_INCREMENT,
+    ban_id          INT(11)         DEFAULT '0',
+    avatar          VARCHAR(255)    DEFAULT NULL,
+    avatar_name     VARCHAR(255)    DEFAULT NULL,
+    username        VARCHAR(255)    DEFAULT NULL,
+    name            VARCHAR(255)    DEFAULT NULL,
+    blocked         VARCHAR(1)      DEFAULT NULL,
+    password        VARCHAR(125)    DEFAULT NULL,
+    email           VARCHAR(255)    DEFAULT NULL,
+    updated_at      TIMESTAMP NULL  DEFAULT NULL,
+    created_at      TIMESTAMP NULL  DEFAULT NULL,
+    deleted_at      TIMESTAMP NULL  DEFAULT NULL,
+    CONSTRAINT      fk_ban_users    FOREIGN KEY(ban_id) REFERENCES bans(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS bans;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS bans (
+    PRIMARY KEY (id),
+    id          INT(11)     NOT NULL AUTO_INCREMENT,
+    reason      TEXT,
+    created_at  TIMESTAMP   NULL DEFAULT NULL,
+    updated_at  TIMESTAMP   NULL DEFAULT NULL,
+    deleted_at  TIMESTAMP   NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+--
+-- Table structure for table `abilities`
+--
+
+DROP TABLE IF EXISTS abilities;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS abilities (
+    PRIMARY KEY (id),
+    id          INT(11)       NOT NULL AUTO_INCREMENT,
+    name        VARCHAR(255)  DEFAULT NULL,
+    description VARCHAR(255)  DEFAULT NULL,
+    created_at  TIMESTAMP     NULL DEFAULT NULL,
+    updated_at  TIMESTAMP     NULL DEFAULT NULL,
+    deleted_at  TIMESTAMP     NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+DROP TABLE IF EXISTS login_abilities;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS login_abilities (
+    PRIMARY KEY (id),
+    id          INT(11)     NOT NULL AUTO_INCREMENT,
+    login_id    INT(11)     DEFAULT NULL,
+    ability_id  INT(11)     DEFAULT NULL,
+    created_at  TIMESTAMP   NULL DEFAULT NULL,
+    updated_at  TIMESTAMP   NULL DEFAULT NULL,
+    deleted_at  TIMESTAMP   NULL DEFAULT NULL,
+    CONSTRAINT  fk_abilities        FOREIGN KEY (ability_id) REFERENCES abilities(id),
+    CONSTRAINT  fk_abilities_login  FOREIGN KEY (login_id)   REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES users WRITE;
+
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO users (username, name, blocked, password, email)
+     VALUES ('Topairy', 'Tim Joosten', 'N', MD5('root1995!'), 'Topairy@gmail.com');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS permissions;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS permissions (
+    PRIMARY KEY (id),
+    id          INT(11)         NOT NULL AUTO_INCREMENT,
+    name        VARCHAR(255)    DEFAULT NULL,
+    description TEXT,
+    created_at  TIMESTAMP       NULL DEFAULT NULL,
+    updated_at  TIMESTAMP       NULL DEFAULT NULL,
+    deleted_at  TIMESTAMP       NULL DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `permissions`
+--
+
+LOCK TABLES permissions WRITE;
+
+/*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
+INSERT INTO permissions (name, description)
+     VALUES ('Admin', 'The administrator role for the application.'),
+            ('Guest', 'The normal permissions role for the application,');
+/*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
+
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS login_permissions;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS login_permissions (
+    PRIMARY KEY (id),
+    id              INT(11)     NOT NULL AUTO_INCREMENT,
+    permissions_id  INT(11)     DEFAULT NULL,
+    login_id        INT(11)     DEFAULT NULL,
+    created_at      TIMESTAMP   NULL DEFAULT NULL,
+    updated_at      TIMESTAMP   NULL DEFAULT NULL,
+    deleted_at      TIMESTAMP   NULL DEFAULT NULL,
+    CONSTRAINT      fk_permissions       FOREIGN key (permissions_id) REFERENCES permissions(id),
+    CONSTRAINT      fk_permissions_login FOREIGN KEY (login_id)       REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `login_permissions`
+--
+
+LOCK TABLES login_permissions WRITE;
+
+/*!40000 ALTER TABLE `login_permissions` DISABLE KEYS */;
+INSERT INTO login_permissions (permissions_id, login_id)
+     VALUES (1, 1);
+/*!40000 ALTER TABLE `login_permissions` ENABLE KEYS */;
+
+UNLOCK TABLES;
+
 --
 -- Table structure for table `ci_sessions`
 --
