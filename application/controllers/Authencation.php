@@ -5,9 +5,10 @@
  */
 class Authencation extends MY_Controller
 {
-    public $user        = []; /** @var array $user        The authencated user data.        */
-    public $permissions = []; /** @var array $permissions The authencated user permissions. */
-    public $abilities   = []; /** @var array $abilities   The authencated user abilities.   */
+    public $user        = []; /** @var array $user        The authencated user data.              */
+    public $permissions = []; /** @var array $permissions The authencated user permissions.       */
+    public $abilities   = []; /** @var array $abilities   The authencated user abilities.         */
+    public $language    = []; /** @var array $language    The language settiàngs for the visitor. */
 
     public function __construct()
     {
@@ -18,6 +19,7 @@ class Authencation extends MY_Controller
         $this->user        = $this->session->userdata('user');
         $this->abilities   = $this->session->userdata('abilities');
         $this->permissions = $this->session->userdata('permissions');
+        $this->language    = $this->session->userdata('language');
     }
 
     /**

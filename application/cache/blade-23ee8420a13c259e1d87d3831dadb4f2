@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495748499;s:3:"ttl";i:3600;s:4:"data";s:6222:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1496140147;s:3:"ttl";i:3600;s:4:"data";s:6581:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
@@ -67,9 +67,15 @@ a:3:{s:4:"time";i:1495748499;s:3:"ttl";i:3600;s:4:"data";s:6222:"<!DOCTYPE html>
 								Taal: NL <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/BE.png') ; ?>" alt="Nederlands">Nederlands</a></li>
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/FR.png') ; ?>" alt="Frans">Frans</a></li>
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/US.png') ; ?>" alt="Engels">Engels</a></li>
+								<li>
+                                    <a href="<?php echo  site_url('language/set/dutch') ; ?>">
+                                        <img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/BE.png') ; ?>" alt="Nederlands">Nederlands
+                                    </a>
+                                </li>
+								<li><a href="<?php echo  site_url('language/set/french') ; ?>">
+                                    <img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/FR.png') ; ?>" alt="Frans">Frans</a>
+                                </li>
+								<li><a href="<?php echo  site_url('language/set/english') ; ?>"><img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/US.png') ; ?>" alt="Engels">Engels</a></li>
 							</ul>
 						</li>
                     </ul>

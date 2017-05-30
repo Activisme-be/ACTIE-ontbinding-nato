@@ -71,9 +71,15 @@
 								Taal: NL <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">Nederlands</a></li>
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">Frans</a></li>
-								<li><a href="#"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/US.png') }}" alt="Engels">Engels</a></li>
+								<li>
+                                    <a href="{{ site_url('language/set/dutch') }}">
+                                        <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">Nederlands
+                                    </a>
+                                </li>
+								<li><a href="{{ site_url('language/set/french') }}">
+                                    <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">Frans</a>
+                                </li>
+								<li><a href="{{ site_url('language/set/english') }}"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/US.png') }}" alt="Engels">Engels</a></li>
 							</ul>
 						</li>
                     </ul>
