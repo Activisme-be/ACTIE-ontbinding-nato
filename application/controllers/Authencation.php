@@ -44,8 +44,8 @@ class Authencation extends MY_Controller
      */
     public function verify()
     {
-        $this->form_validation->set_rules('email', 'email', 'trim|required');
-        $this->form_validation->set_rules('password', 'password', 'trim|required|callback_check_database');
+        $this->form_validation->set_rules('email', 'lang:validation_auth_login_email', 'trim|required');
+        $this->form_validation->set_rules('password', 'lang:validation_auth_login_password', 'trim|required|callback_check_database');
 
         if ($this->form_validation->run() === false) { // Form validation fails
             $data['title'] = lang('auth_login_title');

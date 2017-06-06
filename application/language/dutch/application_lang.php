@@ -86,3 +86,13 @@ $lang['title_disclaimer'] = 'Disclaimer';
 $lang['title_support'] = 'Steunbetuigingen';
 $lang['flash_success_signature'] = 'Bedankt voor het steunen van dit verdrag.';
 $lang['title_index'] = 'Ontbind de NATO!';
+
+// Controller - form-validation
+$lang['validation_auth_login_email'] = 'E-mail adres';
+$lang['validation_auth_login_password'] = 'Wachtwoord';
+
+$lang['validation_support_name'] = 'Naam';
+$lang['validation_support_email']   = 'E-mail adres';
+$lang['validation_support_country'] = 'Land';
+$lang['validation_support_city_name'] = 'Stadsnaam';
+$lang['validation_support_postal_code'] = 'Postcode';
