@@ -16,21 +16,17 @@
         {{-- Facebook OpenGraph Data --}}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="http://www.nato.activisme.be" />
-        <meta property="og:title" content="Ontbind de NATO!" />
+        <meta property="og:title" content="{{ lang('meta_facebook_title') }}" />
         <meta property="og:image" content="{{ site_url('assets/img/front.jpg') }}" />
-        <meta property="og:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupacts is meer dan een kwart eeuw geleden ontbonden.
-        Het is tijd dat ook de NAVO ophoudt te bestaan en dat we onze veiligheid gemeenschappelijk, samen met onze buren,
-        maar ook met landen uit de hele wereld, organiseren. We willen dit doen in de schoot van de Verenigde Naties, die net daarvoor een mandaat heeft gekregen.">
+        <meta property="og:description" content="{{ lang('meta_facebook_discription') }}">
         <meta property='article:publisher' content='https://www.facebook.com/ActivismeBE' />
 
 
         {{-- Twitter card --}}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@Activisme_be" />
-        <meta name="twitter:title" content="Ontbind de NATO!" />
-        <meta name="twitter:description" content="We verklaren dat de NAVO verouderd is. Het Warschaupactss is meer dan een kwart eeuw geleden ontbonden.
-        Het is tijd dat ook de NAVO ophoudt te bestaan en dat we onze veiligheid gemeenschappelijk, samen met onze buren,
-        maar ook met landen uit de hele wereld, organiseren. We willen dit doen in de schoot van de Verenigde Naties, die net daarvoor een mandaat heeft gekregen." />
+        <meta name="twitter:title" content="{{ lang('meta_twitter_title') }}" />
+        <meta name="twitter:description" content="{{ lang('meta_twitter_description') }}" />
         <meta name="twitter:image" content="{{ site_url('assets/img/front.jpg') }}" />
 
         {{-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries. --}}
@@ -50,36 +46,42 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <a class="navbar-brand" href="{{ site_url() }}">Ontbind de NATO</a>
+                    <a class="navbar-brand" href="{{ site_url() }}">{{ lang('app_name') }}</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="@if(current_url() === site_url()) active @endif">
-                            <a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> Besluitvorming</a>
+                            <a href="{{ site_url() }}"><span class="fa fa-file-text-o" aria-hidden="true"></span> {{ lang('nav_text') }}</a>
                         </li>
                         <li class="@if(current_url() === site_url('support')) active @endif">
-                            <a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
+                            <a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> {{ lang('nav_support') }}</a>
                         </li>
 						<li class="@if(current_url() === site_url('disclaimer')) active @endif">
-							<a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
+							<a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> {{ lang('nav_disclaimer') }}</a>
 						</li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								Taal: NL <span class="caret"></span>
+								{{ lang('nav_lang_dropdown') }}: {{ lang('nav_lang_current') }} <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li>
                                     <a href="{{ site_url('language/set/dutch') }}">
-                                        <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">Nederlands
+                                        <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">{{ lang('nav_lang_dutch') }}
                                     </a>
                                 </li>
-								<li><a href="{{ site_url('language/set/french') }}">
-                                    <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">Frans</a>
+								<li>
+									<a href="{{ site_url('language/set/french') }}">
+                                    	<img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">{{ lang('nav_lang_french') }}
+									</a>
                                 </li>
-								<li><a href="{{ site_url('language/set/english') }}"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/US.png') }}" alt="Engels">Engels</a></li>
+								<li>
+									<a href="{{ site_url('language/set/english') }}">
+										<img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/US.png') }}" alt="Engels">{{ lang('nav_lang_english') }}
+									</a>
+								</li>
 							</ul>
 						</li>
                     </ul>
