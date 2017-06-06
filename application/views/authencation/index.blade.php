@@ -9,7 +9,7 @@
 		@endif
 
         <div class="panel panel-default">
-            <div class="panel-heading">Inloggen:</div>
+            <div class="panel-heading">{{ lang('auth_panel_heding') }}:</div>
             <div class="panel-body">
                 <form action="{{ site_url('authencation/verify') }}" class="form-horizontal" method="POST">
                     <div class="form-group">

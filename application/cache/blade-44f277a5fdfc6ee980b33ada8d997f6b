@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495978169;s:3:"ttl";i:3600;s:4:"data";s:2273:"
+a:3:{s:4:"time";i:1496754600;s:3:"ttl";i:3600;s:4:"data";s:2307:"
 
 <?php $this->_section_start('content'); ?>
     <div class="col-md-offset-2 col-md-8">
@@ -9,7 +9,7 @@ a:3:{s:4:"time";i:1495978169;s:3:"ttl";i:3600;s:4:"data";s:2273:"
 		<?php endif; ?>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Inloggen:</div>
+            <div class="panel-heading"><?php echo  lang('auth_panel_heding') ; ?>:</div>
             <div class="panel-body">
                 <form action="<?php echo  site_url('authencation/verify') ; ?>" class="form-horizontal" method="POST">
                     <div class="form-group">

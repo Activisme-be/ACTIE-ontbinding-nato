@@ -68,3 +68,6 @@ $lang['nav_lang_english'] = 'Engels';
 $lang['nav_lang_french']  = 'Frans';
 $lang['nav_lang_dutch']   = 'Nederlands';
 
+// Authencation - login
+$lang['auth_panel_heading'] = 'Inloggen';
+
