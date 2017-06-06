@@ -40,7 +40,7 @@ class Support extends MY_Controller
     {
         $this->load->library(['pagination', 'paginator']);
 
-        $data['title']      = 'Steinbetuigingen';
+        $data['title']      = lang('title_support');
         $data['signatures'] = new Signatures;
         $data['count']      = Signatures::count();
 
@@ -85,7 +85,7 @@ class Support extends MY_Controller
 
         if (Signatures::create($input)) { // True if store success.
             $this->session->set_flashdata('class', 'alert alert-success');
-            $this->session->set_flashdata('message', 'Bedankt voor het steunen van dit verdrag.');
+            $this->session->set_flashdata('message', lang('flash_success_signature'));
         }
 
         return redirect($_SERVER['HTTP_REFERER']);

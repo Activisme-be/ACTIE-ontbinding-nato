@@ -76,3 +76,12 @@ $lang['auth_label_password'] = 'Wachtwoord';
 $lang['auth_placeholder_password'] = 'Wachtwoord';
 $lang['auth_button_submit'] = 'Inloggen';
 $lang['auth_button_lost']   = 'Wachtwoord vergeten?';
+
+// Controller translations.
+$lang['auth_flash_err_validation'] = 'De gebruikersnaam en het wachtwoord is foutief. En kan niet worden gevonden.';
+$lang['auth_flash_err_no_perm']    = 'U hebt geen rechten om hier in te loggen';
+$lang['auth_flash_err_wrong_combo'] = 'Wrong credentials given.';
+$lang['auth_login_title'] = 'Inloggen';
+$lang['title_disclaimer'] = 'Disclaimer';
+$lang['title_support'] = 'Steunbetuigingen';
+$lang['flash_success_signature'] = 'Bedankt voor het steunen van dit verdrag.';

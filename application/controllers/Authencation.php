@@ -48,11 +48,11 @@ class Authencation extends MY_Controller
         $this->form_validation->set_rules('password', 'password', 'trim|required|callback_check_database');
 
         if ($this->form_validation->run() === false) { // Form validation fails
-            $data['title'] = 'Inloggen';
+            $data['title'] = lang('auth_login_title');
             return $this->blade->render('authencation/index', $data);
 
             $this->session->set_flashdata('class', 'alert alert-danger');
-            $this->session->set_flashdata('message', 'De gebruikersnaam en het wachtwoord is foutief. En kan niet worden gevonden.');
+            $this->session->set_flashdata('message', lang('auth_flash_err_validation'));
 
             return $this->blade->render('authencation/index', $data);
         }
@@ -101,16 +101,16 @@ class Authencation extends MY_Controller
 
                     return true;
                 }  else {
-					$this->form_validation->set_message('check_database', 'U hebt geen rechten om hier in te loggen.');
+					$this->form_validation->set_message('check_database', lang('auth_flash_err_no_perm'));
                     $this->session->set_flashdata('class', 'alert alert-danger');
-                    $this->session->set_flashdata('message', 'U hebt geen rechten om hier in te loggen');
+                    $this->session->set_flashdata('message', lang('auth_flash_err_no_perm'));
 
                     return false;
                 }
             }
         } else {
 			$this->session->set_flashdata('class', 'alert alert-danger');
-			$this->session->set_flashdata('message', 'Wrong credentials given.');
+			$this->session->set_flashdata('message', lang('auth_flash_err_wrong_combo'));
 
 			$this->form_validation->set_message('check_database', 'Foutieve login gegevens.');
 

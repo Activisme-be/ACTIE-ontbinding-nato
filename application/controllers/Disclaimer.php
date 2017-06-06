@@ -38,7 +38,7 @@ class Disclaimer extends MY_Controller
 	 */
     public function index()
     {
-        $data['title'] = 'Disclaimer';
+        $data['title'] = lang('title_disclaimer');
         return $this->blade->render('disclaimer', $data);
     }
 }
