@@ -70,4 +70,9 @@ $lang['nav_lang_dutch']   = 'Nederlands';
 
 // Authencation - login
 $lang['auth_panel_heading'] = 'Inloggen';
-
+$lang['auth_label_email']   = 'E-mail';
+$lang['auth_placeholder_email'] = 'E-mail adres';
+$lang['auth_label_password'] = 'Wachtwoord';
+$lang['auth_placeholder_password'] = 'Wachtwoord';
+$lang['auth_button_submit'] = 'Inloggen';
+$lang['auth_button_lost']   = 'Wachtwoord vergeten?';
