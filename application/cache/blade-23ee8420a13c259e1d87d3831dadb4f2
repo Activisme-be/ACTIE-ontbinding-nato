@@ -1,10 +1,10 @@
-a:3:{s:4:"time";i:1496754396;s:3:"ttl";i:3600;s:4:"data";s:6283:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1496756140;s:3:"ttl";i:3600;s:4:"data";s:6291:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
 
-        <title> ActivismeBE | Ontbind de NATO </title>
+        <title> ActivismeBE | <?php echo  $title ; ?> </title>
 
         <link rel="icon"       href="//nato.activisme.be/assets/favicon.ico">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap.css">

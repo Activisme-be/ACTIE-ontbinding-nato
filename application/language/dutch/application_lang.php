@@ -85,3 +85,4 @@ $lang['auth_login_title'] = 'Inloggen';
 $lang['title_disclaimer'] = 'Disclaimer';
 $lang['title_support'] = 'Steunbetuigingen';
 $lang['flash_success_signature'] = 'Bedankt voor het steunen van dit verdrag.';
+$lang['title_index'] = 'Ontbind de NATO!';

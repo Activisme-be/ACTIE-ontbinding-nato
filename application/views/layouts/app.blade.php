@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="viewport" content="width=device-width, initial-scale=1">
 
-        <title> ActivismeBE | Ontbind de NATO </title>
+        <title> ActivismeBE | {{ $title }} </title>
 
         <link rel="icon"       href="//nato.activisme.be/assets/favicon.ico">
         <link rel="stylesheet" href="//nato.activisme.be/assets/css/bootstrap.css">

@@ -38,6 +38,7 @@ class Welcome extends MY_Controller
 	 */
 	public function index()
 	{
-		return $this->blade->render('index');
+		$data['title'] = lang('title_index');
+		return $this->blade->render('index', $data);
 	}
 }
