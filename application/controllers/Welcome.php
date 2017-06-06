@@ -20,12 +20,15 @@ class Welcome extends MY_Controller
 		parent::__construct(); 
 
 		$this->load->library(['blade', 'session', 'form_validation']);
-		$this->load->helper(['url']);
+		$this->load->helper(['url', 'language']);
 
 		$this->user        = $this->session->userdata('user');
 		$this->abilities   = $this->session->userdata('abilities');
 		$this->permissions = $this->session->userdata('permissions'); 
 		$this->language    = $this->session->userdata('language');
+
+		// Language loading 
+		$this->lang->load('application', $this->language['idiom']);
 	}
 
 	/**

@@ -5,13 +5,15 @@
  */
 class Language extends MY_Controller 
 {
-    public $user        = []; 
-    public $permissions = []; 
-    public $abilities   = []; 
-    public $language    = [];
+    public $user        = []; /** @var array  */
+    public $permissions = []; /** @var array  */
+    public $abilities   = []; /** @var array  */
+    public $language    = []; /** @var array  */
 
 	/**
 	 * Language constructor.
+	 *
+	 * @return void
 	 */
     public function __construct() 
     {
@@ -27,10 +29,17 @@ class Language extends MY_Controller
     }
 
 	/**
+	 * The supported languages.
+	 *
 	 * @var array
 	 */
 	protected static $supportedLanguages = ['dutch', 'english', 'french'];
 
+	/**
+	 * Set the language to thue session.
+	 *
+	 * @return mixed.
+	 */
     public function set() 
     {
 		$input = ($this->uri->segment(3)) ?: $this->session->userdata('language');
@@ -40,8 +49,9 @@ class Language extends MY_Controller
     }
 
 	/**
-	 * @param string $lang
+	 * Check if the language is supported.
 	 *
+	 * @param  string $lang
 	 * @return bool
 	 */
 	private function isLanguageSupported($lang)
@@ -50,12 +60,15 @@ class Language extends MY_Controller
 	}
 
 	/**
-	 * @param string $lang
+	 * Set the disered language to a session.
+	 *
+	 * @param  string $lang
+	 * @return void
 	 */
 	private function setSupportedLanguage($lang)
 	{
 		if ($this->isLanguageSupported($lang)) {
-			$data['language'] = $lang;
+			$data['idiom'] = $lang;
 
 			$this->session->set_userdata('language', $data);
 		}

@@ -177,19 +177,19 @@
 
 		<div style="margin-bottom: 10px;">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-facebook">
-				<span class="fa fa-facebook"></span> Deel op facebook
+				<span class="fa fa-facebook"></span> {{ lang('share_facebook') }}
 			</a>
 
 			<a href="https://twitter.com/home?status=Ik%20wil%20de%20NATO%20ontbinden.%20%0A%0A-%20http%3A//www.nato.activisme.be%20%23ActivismeBE%20%23VredeBE" class="btn btn-block btn-social btn-twitter">
-				<span class="fa fa-twitter"></span> Deel op twitter
+				<span class="fa fa-twitter"></span> {{ lang('share_twitter') }}
 			</a>
 
 			<a href="https://plus.google.com/share?url=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-google">
-				<span class="fa fa-google"></span> Deel op Google+
+				<span class="fa fa-google"></span> {{ lang('share_google') }}
 			</a>
 
 			<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.nato.activisme.be&title=Ontbind%20de%20NATO&summary=&source=" class="btn btn-block btn-social btn-linkedin">
-				<span class="fa fa-linkedin"></span> Deel op LinkedIn
+				<span class="fa fa-linkedin"></span> {{ lang('share_linkedin') }}
 			</a>
 		</div>
 	</div>
