@@ -88,13 +88,13 @@
 
 	<div class="col-md-3 col-sm-12 col-xs-12">
 		<div class="panel panel-default">
-			<div class="panel-heading">Ik steun dit verdrag:</div>
+			<div class="panel-heading">{{ lang('form_heading') }}</div>
 
 			<div class="panel-body">
 				<form class="form-horizontal" method="POST" action="{{ site_url('support/store') }}" id="support">
 					<div class="form-group {{ form_error('name') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
-							<input type="text" class="form-control input-sm" placeholder="Naam en voornaam" name="name" value="{{ set_value('name') }}">
+							<input type="text" class="form-control input-sm" placeholder="{{ lang('placeholder_name') }}" name="name" value="{{ set_value('name') }}">
 
 							@if (form_error('name'))
 								<span class="help-block"><small>{{ form_error('name') }}</small></span>
@@ -104,7 +104,7 @@
 
 					<div class="form-group form-group-sm {{ form_error('email') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
-							<input class="form-control" placeholder="Email adres" name="email" value="{{ set_value('email') }}">
+							<input class="form-control" placeholder="{{ lang('placeholder_email') }}" name="email" value="{{ set_value('email') }}">
 
 							@if (form_error('email'))
 								<span class="help-block"><small>{{ form_error('email') }}</small></span>
@@ -114,11 +114,11 @@
 
 					<div class="form-group {{ form_error('city_name') || form_error('postal_code') ? 'has-error' : '' }}">
 						<div class="col-md-4 col-sm-4">
-							<input type="text" placeholder="Code" name="postal_code" value="{{ set_value('postal_code')  }}" class="form-control input-sm">
+							<input type="text" placeholder="{{ lang('placeholder_postal_code') }}" name="postal_code" value="{{ set_value('postal_code')  }}" class="form-control input-sm">
 						</div>
 
 						<div class="col-md-8 col-sm-8">
-							<input type="text" placeholder="Stadsnaam" name="city_name" value="{{ set_value('city_name')  }}" class="form-control input-sm">
+							<input type="text" placeholder="{{ lang('placeholder_city_name') }}" name="city_name" value="{{ set_value('city_name')  }}" class="form-control input-sm">
 						</div>
 
 						@if (form_error('city_name') || form_error('postal_code'))
@@ -137,7 +137,7 @@
 					<div class="form-group {{ form_error('country') ? 'has-error' : '' }}">
 						<div class="col-sm-12">
 							<select name="country" class="form-control input-sm">
-								<option value="">-- Selecteer je land --</option>
+								<option value="">-- {{ lang('form_select_country') }} --</option>
 
 								@foreach (Countries::orderBy('country_name', 'ASC')->get() as $country)
 									<option value="{{ $country->id }}" @if($country->country_name === set_value('country')) selected @endif> {{ $country->country_name }} </option>
@@ -152,7 +152,7 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="checkbox" name="publish" value="N"> Ik teken anoniem.
+							<input type="checkbox" name="publish" value="N"> {{ lang('form_sign_anonymous') }}
 						</div>
 					</div>
 				</form>
@@ -160,18 +160,22 @@
 
 			<div class="panel-footer">
 				<button form="support" class="btn btn-xs btn-success" type="submit">
-					<span class="fa fa-pencil" aria-hidden="true"></span> Teken
+					<span class="fa fa-pencil" aria-hidden="true"></span> {{ lang('form_button_submit') }}
 				</button>
 
 				<button form="support" class="btn btn-xs btn-danger">
-					<span class="fa fa-undo"></span> Formulier legen</span>
+					<span class="fa fa-undo"></span> {{ lang('form_button_reset') }} </span>
 				</button>
 			</div>
 		</div>
 
 		<div style="margin-bottom: 10px;">
 			<span class="text-muted">
-				<i><small>Bij het steunen van dit verdrag. Gaat u akkoord met de <a href="{{ site_url('disclaimer') }}">disclaimer</a>.</small></i>
+				<i>
+					<small>
+						{{ lang('form_disclaimer_notice') }} <a href="{{ site_url('disclaimer') }}">{{ lang('form_disclaimer_link_text') }}</a>.
+					</small>
+				</i>
 			</span>
 		</div>
 
