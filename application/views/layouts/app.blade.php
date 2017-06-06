@@ -60,12 +60,28 @@
                         <li class="@if(current_url() === site_url('support')) active @endif">
                             <a href="{{ site_url('support') }}"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
                         </li>
+						<li class="@if(current_url() === site_url('disclaimer')) active @endif">
+							<a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
+						</li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="@if(current_url() === site_url('disclaimer')) active @endif">
-                            <a href="{{ site_url('disclaimer') }}"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
-                        </li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								Taal: NL <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+                                    <a href="{{ site_url('language/set/dutch') }}">
+                                        <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/BE.png') }}" alt="Nederlands">Nederlands
+                                    </a>
+                                </li>
+								<li><a href="{{ site_url('language/set/french') }}">
+                                    <img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/FR.png') }}" alt="Frans">Frans</a>
+                                </li>
+								<li><a href="{{ site_url('language/set/english') }}"><img style="height: 12px; margin-right: 5px;" src="{{ site_url('assets/img/flags/US.png') }}" alt="Engels">Engels</a></li>
+							</ul>
+						</li>
                     </ul>
                 </div>
             </div>

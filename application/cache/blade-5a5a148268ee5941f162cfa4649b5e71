@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1496747089;s:3:"ttl";i:3600;s:4:"data";s:6581:"<!DOCTYPE html>
+a:3:{s:4:"time";i:1495927113;s:3:"ttl";i:3600;s:4:"data";s:5531:"<!DOCTYPE html>
 <html lang="nl">
     <head>
         <meta charset="utf-8">
@@ -56,28 +56,12 @@ a:3:{s:4:"time";i:1496747089;s:3:"ttl";i:3600;s:4:"data";s:6581:"<!DOCTYPE html>
                         <li class="<?php if(current_url() === site_url('support')): ?> active <?php endif; ?>">
                             <a href="<?php echo  site_url('support') ; ?>"><span class="fa fa-th-list" aria-hidden="true"></span> Steunbetuigingen</a>
                         </li>
-						<li class="<?php if(current_url() === site_url('disclaimer')): ?> active <?php endif; ?>">
-							<a href="<?php echo  site_url('disclaimer') ; ?>"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
-						</li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								Taal: NL <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-                                    <a href="<?php echo  site_url('language/set/dutch') ; ?>">
-                                        <img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/BE.png') ; ?>" alt="Nederlands">Nederlands
-                                    </a>
-                                </li>
-								<li><a href="<?php echo  site_url('language/set/french') ; ?>">
-                                    <img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/FR.png') ; ?>" alt="Frans">Frans</a>
-                                </li>
-								<li><a href="<?php echo  site_url('language/set/english') ; ?>"><img style="height: 12px; margin-right: 5px;" src="<?php echo  site_url('assets/img/flags/US.png') ; ?>" alt="Engels">Engels</a></li>
-							</ul>
-						</li>
+                        <li class="<?php if(current_url() === site_url('disclaimer')): ?> active <?php endif; ?>">
+                            <a href="<?php echo  site_url('disclaimer') ; ?>"><span class="fa fa-info-circle" aria-hidden="true"></span> Disclaimer</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -5,6 +5,11 @@
  */
 class Disclaimer extends MY_Controller
 {
+    public $user        = []; /** @var array $user        The authencated user data.        */
+	public $permissions = []; /** @var array $permissions The authencated user permissions. */
+	public $abilities   = []; /** @var array $abilities   The authencated user abilities.   */
+    public $language    = []; /** @var array $language    The language settiàngs for the visitor. */
+
 	/**
 	 * Disclaimer constructor.
 	 *
@@ -13,8 +18,14 @@ class Disclaimer extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+
         $this->load->library(['blade', 'session']);
         $this->load->helper(['url']);
+
+        $this->user        = $this->session->userdata('user');
+		$this->abilities   = $this->session->userdata('abilities');
+		$this->permissions = $this->session->userdata('permissions'); 
+        $this->language    = $this->session->userdata('language');
     }
 
 	/**

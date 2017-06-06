@@ -1,21 +1,21 @@
-@layout('layouts/app')
+a:3:{s:4:"time";i:1495927113;s:3:"ttl";i:3600;s:4:"data";s:13627:"
 
-@section('content')
+<?php $this->_section_start('content'); ?>
 <div class="row">
     <div class="col-sm-12">
-        <img class="img-rounded img-front" src="{{ site_url('assets/img/front.jpg') }}">
+        <img class="img-rounded img-front" src="<?php echo  site_url('assets/img/front.jpg') ; ?>">
  	</div>
 </div>
 
-@if ($this->session->flashdata('class') && $this->session->flashdata('message'))
+<?php if ($this->session->flashdata('class') && $this->session->flashdata('message')): ?>
 	<div style="padding-top: 15px;" class="row">
 		<div class="col-md-12">
-			<div class="{{ $this->session->flashdata('class') }}" role="alert">
-				{{ $this->session->flashdata('message') }}
+			<div class="<?php echo  $this->session->flashdata('class') ; ?>" role="alert">
+				<?php echo  $this->session->flashdata('message') ; ?>
 			</div>
 		</div>
 	</div>
-@endif
+<?php endif; ?>
 
 <div style="padding-top: 15px;" class="row">
 	<div class="col-md-9">
@@ -91,62 +91,62 @@
 			<div class="panel-heading">Ik steun dit verdrag:</div>
 
 			<div class="panel-body">
-				<form class="form-horizontal" method="POST" action="{{ site_url('support/store') }}" id="support">
-					<div class="form-group {{ form_error('name') ? 'has-error' : '' }}">
+				<form class="form-horizontal" method="POST" action="<?php echo  site_url('support/store') ; ?>" id="support">
+					<div class="form-group <?php echo  form_error('name') ? 'has-error' : '' ; ?>">
 						<div class="col-sm-12">
-							<input type="text" class="form-control input-sm" placeholder="Naam en voornaam" name="name" value="{{ set_value('name') }}">
+							<input type="text" class="form-control input-sm" placeholder="Naam en voornaam" name="name" value="<?php echo  set_value('name') ; ?>">
 
-							@if (form_error('name'))
-								<span class="help-block"><small>{{ form_error('name') }}</small></span>
-							@endif
+							<?php if (form_error('name')): ?>
+								<span class="help-block"><small><?php echo  form_error('name') ; ?></small></span>
+							<?php endif; ?>
 						</div>
 					</div>
 
-					<div class="form-group form-group-sm {{ form_error('email') ? 'has-error' : '' }}">
+					<div class="form-group form-group-sm <?php echo  form_error('email') ? 'has-error' : '' ; ?>">
 						<div class="col-sm-12">
-							<input class="form-control" placeholder="Email adres" name="email" value="{{ set_value('email') }}">
+							<input class="form-control" placeholder="Email adres" name="email" value="<?php echo  set_value('email') ; ?>">
 
-							@if (form_error('email'))
-								<span class="help-block"><small>{{ form_error('email') }}</small></span>
-							@endif
+							<?php if (form_error('email')): ?>
+								<span class="help-block"><small><?php echo  form_error('email') ; ?></small></span>
+							<?php endif; ?>
 						</div>
 					</div>
 
-					<div class="form-group {{ form_error('city_name') || form_error('postal_code') ? 'has-error' : '' }}">
+					<div class="form-group <?php echo  form_error('city_name') || form_error('postal_code') ? 'has-error' : '' ; ?>">
 						<div class="col-md-4 col-sm-4">
-							<input type="text" placeholder="Code" name="postal_code" value="{{ set_value('postal_code')  }}" class="form-control input-sm">
+							<input type="text" placeholder="Code" name="postal_code" value="<?php echo  set_value('postal_code')  ; ?>" class="form-control input-sm">
 						</div>
 
 						<div class="col-md-8 col-sm-8">
-							<input type="text" placeholder="Stadsnaam" name="city_name" value="{{ set_value('city_name')  }}" class="form-control input-sm">
+							<input type="text" placeholder="Stadsnaam" name="city_name" value="<?php echo  set_value('city_name')  ; ?>" class="form-control input-sm">
 						</div>
 
-						@if (form_error('city_name') || form_error('postal_code'))
+						<?php if (form_error('city_name') || form_error('postal_code')): ?>
 							<div class="col-md-12">
-								@if (form_error('city_name'))
-									<span class="help-block"><small>{{ form_error('city_name') }}</small></span>
-								@endif
+								<?php if (form_error('city_name')): ?>
+									<span class="help-block"><small><?php echo  form_error('city_name') ; ?></small></span>
+								<?php endif; ?>
 
-									@if (form_error('postal_code'))
-										<span class="help-block"><small>{{ form_error('postal_code') }}</small></span>
-									@endif
+									<?php if (form_error('postal_code')): ?>
+										<span class="help-block"><small><?php echo  form_error('postal_code') ; ?></small></span>
+									<?php endif; ?>
 							</div>
-						@endif
+						<?php endif; ?>
 					</div>
 
-					<div class="form-group {{ form_error('country') ? 'has-error' : '' }}">
+					<div class="form-group <?php echo  form_error('country') ? 'has-error' : '' ; ?>">
 						<div class="col-sm-12">
 							<select name="country" class="form-control input-sm">
 								<option value="">-- Selecteer je land --</option>
 
-								@foreach (Countries::orderBy('country_name', 'ASC')->get() as $country)
-									<option value="{{ $country->id }}" @if($country->country_name === set_value('country')) selected @endif> {{ $country->country_name }} </option>
-								@endforeach
+								<?php foreach (Countries::orderBy('country_name', 'ASC')->get() as $country): ?>
+									<option value="<?php echo  $country->id ; ?>" <?php if($country->country_name === set_value('country')): ?> selected <?php endif; ?>> <?php echo  $country->country_name ; ?> </option>
+								<?php endforeach; ?>
 							</select>
 
-							@if (form_error('country'))
-								<span class="help-block"><small>{{ form_error('country') }}</small></span>
-							@endif
+							<?php if (form_error('country')): ?>
+								<span class="help-block"><small><?php echo  form_error('country') ; ?></small></span>
+							<?php endif; ?>
 						</div>
 					</div>
 
@@ -171,31 +171,34 @@
 
 		<div style="margin-bottom: 10px;">
 			<span class="text-muted">
-				<i><small>Bij het steunen van dit verdrag. Gaat u akkoord met de <a href="{{ site_url('disclaimer') }}">disclaimer</a>.</small></i>
+				<i><small>Bij het steunen van dit verdrag. Gaat u akkoord met de <a href="<?php echo  site_url('disclaimer') ; ?>">disclaimer</a>.</small></i>
 			</span>
 		</div>
 
 		<div style="margin-bottom: 10px;">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-facebook">
-				<span class="fa fa-facebook"></span> {{ lang('share_facebook') }}
+				<span class="fa fa-facebook"></span> Deel op facebook
 			</a>
 
 			<a href="https://twitter.com/home?status=Ik%20wil%20de%20NATO%20ontbinden.%20%0A%0A-%20http%3A//www.nato.activisme.be%20%23ActivismeBE%20%23VredeBE" class="btn btn-block btn-social btn-twitter">
-				<span class="fa fa-twitter"></span> {{ lang('share_twitter') }}
+				<span class="fa fa-twitter"></span> Deel op twitter
 			</a>
 
 			<a href="https://plus.google.com/share?url=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-google">
-				<span class="fa fa-google"></span> {{ lang('share_google') }}
+				<span class="fa fa-google"></span> Deel op Google+
 			</a>
 
 			<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.nato.activisme.be&title=Ontbind%20de%20NATO&summary=&source=" class="btn btn-block btn-social btn-linkedin">
-				<span class="fa fa-linkedin"></span> {{ lang('share_linkedin') }}
+				<span class="fa fa-linkedin"></span> Deel op LinkedIn
 			</a>
 		</div>
 	</div>
 </div>
-@endsection
+<?php $this->_section_end(); ?>
 
-@section('footer')
-	@include('layouts/footer')
-@endsection
+<?php $this->_section_start('footer'); ?>
+	<?php echo $this->_include('layouts/footer'); ?>
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('layouts/app'); ?>
+";}

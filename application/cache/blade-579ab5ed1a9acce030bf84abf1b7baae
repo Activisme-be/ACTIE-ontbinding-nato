@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1495732394;s:3:"ttl";i:3600;s:4:"data";s:13640:"
+a:3:{s:4:"time";i:1496747226;s:3:"ttl";i:3600;s:4:"data";s:13718:"
 
 <?php $this->_section_start('content'); ?>
 <div class="row">
@@ -66,7 +66,7 @@ a:3:{s:4:"time";i:1495732394;s:3:"ttl";i:3600;s:4:"data";s:13640:"
 					<li style="padding-bottom: 5px;">erkennend dat de kernwapenstaten van de NAVO grootschalige moderniseringsprogramma’s opzetten in weerwil van artikel 6 van het nonproliferatieverdrag waarin ze zich ertoe verbinden hun kernwapenarsenalen volledig af te bouwen.</li>
 				</ol>
 
-				<h4 class="text">A. BESLUITEN DAT DE NAVO MET ONMIDDELLIJKE INGANG ZAL ONTBONDEN WORDEN</h4>
+				<h4>A. BESLUITEN DAT DE NAVO MET ONMIDDELLIJKE INGANG ZAL ONTBONDEN WORDEN</h4>
 
 				<ol class="list-unstyled" style="list-style: decimal inside;">
 					<li style="padding-bottom: 5px;">wegens herhaaldelijke inbreuken op het internationaal recht zoals vervat in het VN-Handvest;</li>
@@ -177,19 +177,19 @@ a:3:{s:4:"time";i:1495732394;s:3:"ttl";i:3600;s:4:"data";s:13640:"
 
 		<div style="margin-bottom: 10px;">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-facebook">
-				<span class="fa fa-facebook"></span> Deel op facebook
+				<span class="fa fa-facebook"></span> <?php echo  lang('share_facebook') ; ?>
 			</a>
 
 			<a href="https://twitter.com/home?status=Ik%20wil%20de%20NATO%20ontbinden.%20%0A%0A-%20http%3A//www.nato.activisme.be%20%23ActivismeBE%20%23VredeBE" class="btn btn-block btn-social btn-twitter">
-				<span class="fa fa-twitter"></span> Deel op twitter
+				<span class="fa fa-twitter"></span> <?php echo  lang('share_twitter') ; ?>
 			</a>
 
 			<a href="https://plus.google.com/share?url=http%3A//www.nato.activisme.be" class="btn btn-block btn-social btn-google">
-				<span class="fa fa-google"></span> Deel op Google+
+				<span class="fa fa-google"></span> <?php echo  lang('share_google') ; ?>
 			</a>
 
 			<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.nato.activisme.be&title=Ontbind%20de%20NATO&summary=&source=" class="btn btn-block btn-social btn-linkedin">
-				<span class="fa fa-linkedin"></span> Deel op LinkedIn
+				<span class="fa fa-linkedin"></span> <?php echo  lang('share_linkedin') ; ?>
 			</a>
 		</div>
 	</div>
