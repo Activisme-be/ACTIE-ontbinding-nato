@@ -15,6 +15,10 @@ class Authencation extends MY_Controller
         parent::__construct();
         $this->load->library(['blade', 'session', 'form_validation']);
         $this->load->helper(['url']);
+		$this->load->helper(['url', 'language']);
+
+		// Language loading
+		$this->lang->load('application', $this->language['idiom']);
 
         $this->user        = $this->session->userdata('user');
         $this->abilities   = $this->session->userdata('abilities');

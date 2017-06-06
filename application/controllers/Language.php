@@ -21,6 +21,10 @@ class Language extends MY_Controller
 
         $this->load->library(['session']);
         $this->load->helper(['url']);
+		$this->load->helper(['url', 'language']);
+
+		// Language loading
+		$this->lang->load('application', $this->language['idiom']);
 
 		$this->user        = $this->session->userdata('user');
 		$this->abilities   = $this->session->userdata('abilities');
