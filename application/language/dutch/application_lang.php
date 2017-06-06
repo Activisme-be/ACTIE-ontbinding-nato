@@ -28,3 +28,14 @@ $lang['placeholder_postal_code'] = 'Code';
 $lang['placeholder_city_name']   = 'Stadsnaam';
 $lang['placeholder_email']       = 'Email adres';
 $lang['placeholder_name'] = 'Naam en voornaam';
+
+// Support section.
+$lang['support_heading'] = 'Steunbetuigingen';
+$lang['support_no_signatures'] = 'Er zijn nog geen steunbetuigingen voor dit verdrag.';
+$lang['support_with_signatures'] = 'Er zijn %1$s steunbetuigingen voor dit verdrag.';
+$lang['support_alert_status'] = 'Info';
+$lang['support_table_name'] = 'Naam';
+$lang['support_table_country'] = 'Land';
+$lang['support_table_place'] = 'Plaats';
+$lang['support_table_date'] = 'Datum';
+$lang['support_table_anonymous'] = 'De gebruiker heeft gekozen om anoniem te tekenen.';

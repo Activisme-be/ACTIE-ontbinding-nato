@@ -12,26 +12,26 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div style="margin-top: -20px;" class="page-header">
-                        <h2 style="margin-bottom: -5px;">Steunbetuigingen</h2>
+                        <h2 style="margin-bottom: -5px;">{{ lang('support_heading') }}</h2>
                     </div>
 
                     @if ($count === 0)
                         <div class="alert alert-info alert-important" role="alert">
-                            <strong><span class="fa fa-info-circle" aria-hidden="true"></span> Info:</strong>
-                            Er zijn nog geen steunbetuigingen voor dit verdrag.
+                            <strong><span class="fa fa-info-circle" aria-hidden="true"></span> {{ lang('support_alert_status') }}:</strong>
+                            {{ lang('support_no_signatures') }}
                         </div>
                     @else
-                        <p class="lead">Er zijn {{ $count }} steunbetuigingen voor dit verdrag.</p>
+                        <p class="lead">{{ sprintf(lang('support_with_signatures'), $count) }}</p>
 
                         <div class="table-responsive">
                             <table class="table table-condensed table-hover table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Naam:</th>
-                                        <th>Land:</th>
-                                        <th>Plaats:</th>
-                                        <th>Datum:</th>
+                                        <th>{{ lang('support_table_name') }}:</th>
+                                        <th>{{ lang('support_table_country') }}:</th>
+                                        <th>{{ lang('support_table_place') }}:</th>
+                                        <th>{{ lang('support_table_date') }}:</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,7 +40,7 @@
                                             <td><strong>#{{ $signature->id }}</strong></td>
 
                                             @if ((string) $signature->publish !== 'Y')
-                                                <td colspan="3"><span class="text-muted"><i>(De gebruiker heeft gekozen om anoniem te tekenen.)</i></span></td>
+                                                <td colspan="3"><span class="text-muted"><i>({{ lang('support_table_anonymous') }})</i></span></td>
                                             @else
                                                 <td>{{ ucfirst($signature->name) }}</td>
                                                 <td>
