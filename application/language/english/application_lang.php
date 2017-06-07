@@ -1,10 +1,10 @@
 <?php
 
 // Social media
-$lang['share_twitter']   							= '';
-$lang['share_facebook']  							= '';
-$lang['share_google']    							= '';
-$lang['share_linkedin']  							= '';
+$lang['share_twitter']   							= 'Share on twitter';
+$lang['share_facebook']  							= 'Share on Facebook';
+$lang['share_google']    							= 'Share on Google Plus';
+$lang['share_linkedin']  							= 'Share on LinkedIn';
 
 // Signature form - misc.
 $lang['form_heading'] 								= '';
